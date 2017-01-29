@@ -8,6 +8,8 @@
 	                       |__/ 
 [![Clojars Project](https://img.shields.io/clojars/v/sss4clj.svg)](https://clojars.org/sss4clj)
 
+[![Build Status](https://travis-ci.org/michaellindon/sss4clj.svg?branch=master)](https://travis-ci.org/michaellindon/sss4clj)<Paste>
+
 ## Usage
 Leiningen:
 
