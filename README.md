@@ -10,7 +10,7 @@
 
 ## Usage
 Add the following to dependencies in your leiningen project.clj
-[![Clojars Project](http://clojars.org/lindon/sss4clj/latest-version.svg)](http://clojars.org/lindon/sss4clj)
+[![Clojars Project](https://clojars.org/sss4clj/latest-version.svg)](http://clojars.org/sss4clj)
 
 ## License
 
