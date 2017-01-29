@@ -8,7 +8,8 @@
 	                       |__/ 
 
 ## Usage
-Coming shortly...
+Add the following to dependencies in your leiningen project.clj
+[![Clojars Project](https://img.shields.io/clojars/v/sss4clj.svg)](https://clojars.org/sss4clj)
 
 ## License
 
