@@ -9,7 +9,8 @@
 [![Clojars Project](https://img.shields.io/clojars/v/sss4clj.svg)](https://clojars.org/sss4clj)
 
 ## Usage
-Add the following to dependencies in your leiningen project.clj
+Leiningen:
+
 [![Clojars Project](https://clojars.org/sss4clj/latest-version.svg)](http://clojars.org/sss4clj)
 
 ## License
