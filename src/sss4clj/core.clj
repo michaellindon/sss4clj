@@ -44,7 +44,7 @@
                        (if (> (count @scoreboard) max-count) (swap! scoreboard pop))
                        fx))) {:scoreboard  scoreboard})))
 
-(defn run-sss4clj [objective Omega niter max-count]
+(defn run-sss [objective Omega niter max-count]
   (let [score (add-priority-map objective max-count)
         last-iterate (last (take niter (iterate (partial next-model score Omega) #{})))
         final-scoreboard (:scoreboard (meta score))]
