@@ -8,4 +8,5 @@
                  [net.mikera/core.matrix "0.57.0"]
                  [net.mikera/vectorz-clj "0.45.0"]
                  [org.clojure/test.check "0.9.0"]
+		 [org.clojure/math.combinatorics "0.1.3"]
                  [org.clojure/data.priority-map "0.0.7"]])
