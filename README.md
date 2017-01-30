@@ -120,7 +120,8 @@ An example.clj file can be found in the source directory which one can experimen
 
 ;; Alternatively, the user can abstract the fine-grained details
 ;; of the implementation and call a one function do-all
-;; This returns the final scoreboard of sets visited
+;; This returns the final scoreboard of sets visited after
+;; 100 iterations of sss with a max-count of 5
 (run-sss objective Omega 100 5)
 => {#{0 1 4 3} 0.8108222058800102, #{0 3 2} 0.8143170162925805, #{0 4} 0.8948151339032558, #{0} 0.951193987214408, #{1} 0.9658085016841405}
 
