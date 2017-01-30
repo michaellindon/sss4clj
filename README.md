@@ -10,6 +10,12 @@
 
 [![Build Status](https://travis-ci.org/michaellindon/sss4clj.svg?branch=master)](https://travis-ci.org/michaellindon/sss4clj)
 
+##About
+Shotgun Stochastic Search is an algorithm for maximizing functions {0,1}ᴾ → ℝ described in
+[Shotgun Stochastic Search for “Large p” Regression](http://www.tandfonline.com/doi/abs/10.1198/016214507000000121).
+Each element a ∈ {0,1}ᴾ can be uniquely identified by an "active set" i.e. {i ∈ ℕ| aᵢ = 1}. This project makes
+the design choice to work with the latter.
+
 ##Installation
 Leiningen:
 
@@ -73,7 +79,6 @@ An example.clj file can be found in the source directory which one can experimen
 => 0.37949346847568177
 (objective A)
 => 0.1971199058962515
-
 
 ;; add-priority-map returns a new function that on the surface
 ;; is identical to objective
