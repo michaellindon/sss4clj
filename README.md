@@ -9,6 +9,7 @@
 [![Clojars Project](https://img.shields.io/clojars/v/sss4clj.svg)](https://clojars.org/sss4clj)
 
 [![Build Status](https://travis-ci.org/michaellindon/sss4clj.svg?branch=master)](https://travis-ci.org/michaellindon/sss4clj)
+[![Dependency Status](https://www.versioneye.com/user/projects/589901721e07ae0048c8e48e/badge.svg?style=flat-square)](https://www.versioneye.com/user/projects/589901721e07ae0048c8e48e)
 
 ##About
 Shotgun Stochastic Search is an algorithm for maximizing functions {0,1}ᴾ → ℝ described in
