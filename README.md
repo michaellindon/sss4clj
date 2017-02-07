@@ -130,6 +130,6 @@ An example.clj file can be found in the source directory which one can experimen
 
 ## License
 
-Copyright © 2017
+Copyright © 2017 Michael Lindon
 
 Distributed under the Eclipse Public License either version 1.0
