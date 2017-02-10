@@ -13,5 +13,4 @@
                  [org.clojure/data.priority-map "0.0.7"]]
   :codox {:metadata {:doc/format :markdown}
           :themes [:rdash]
-          :namespaces [sss4clj.core]
           :source-uri "https://github.com/michaellindon/sss4clj/blob/master/{filepath}#L{line}"})
