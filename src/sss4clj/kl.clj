@@ -42,19 +42,19 @@
 
 
 ;; Lets test the algorithm for random prior parameters and previous model
-(def dim 10)
-(def L (reshape (matrix (sample-normal (* dim dim))) [dim dim]))
-(def prior-sigma (mmul (transpose L) L))
-(def prior-mu (sample-normal dim))
-(def previous-model #{0 1 4})
-(def X (sample-normal dim))
+;(def dim 10)
+;(def L (reshape (matrix (sample-normal (* dim dim))) [dim dim]))
+;(def prior-sigma (mmul (transpose L) L))
+;(def prior-mu (sample-normal dim))
+;(def previous-model #{0 1 4})
+;(def X (sample-normal dim))
 
-(def divergence (KL previous-model X prior-mu prior-sigma 1 1))
-(def obj-fn (comp exp negate (partial * 10) divergence))
-(def Omega (range 0 dim))
-(obj-fn Omega)
-(obj-fn previous-model)
-(obj-fn #{4 1})
-(def Omega (set (range 0 dim)))
+;(def divergence (KL previous-model X prior-mu prior-sigma 1 1))
+;(def obj-fn (comp exp negate (partial * 10) divergence))
+;(def Omega (range 0 dim))
+;(obj-fn Omega)
+;(obj-fn previous-model)
+;(obj-fn #{4 1})
+;(def Omega (set (range 0 dim)))
 
-(run-sss obj-fn Omega 100 10)
+;(run-sss obj-fn Omega 100 10)
