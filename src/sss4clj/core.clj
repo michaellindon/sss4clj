@@ -50,7 +50,9 @@
   [probs categories]
   (first (if (== (count categories) 1)
            categories
-           (sample-multinomial 1 :probs (normalize probs) :categories (into (vector) categories)))))
+           (if (zero? (reduce + probs))
+             nil
+             (sample-multinomial 1 :probs (normalize probs) :categories (into (vector) categories))))))
 
 (defn next-model
   "Performs one iteration of the sss algorithm"
