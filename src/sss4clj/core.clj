@@ -74,9 +74,9 @@
 (defn run-sss
   "A single function to perform sss. Outputs the final
   scoreboard of visited states as a priority-map"
-  [objective Omega niter max-count]
+  [objective initial-model Omega niter max-count]
   (let [score (add-priority-map objective max-count)
-        last-iterate (last (take niter (iterate (partial next-model score Omega) #{})))
+        last-iterate (last (take niter (iterate (partial next-model score Omega) initial-model)))
         final-scoreboard (:scoreboard (meta score))]
     @final-scoreboard))
 
