@@ -1,11 +1,5 @@
+![sss4clj](https://github.com/michaellindon/sss4clj/tree/master/logo/sss4clj.png)
 	               ___      _ _ 
-	              /   |    | (_)
-	 ___ ___ ___ / /| | ___| |_ 
-	/ __/ __/ __/ /_| |/ __| | |
-	\__ \__ \__ \___  | (__| | |
-	|___/___/___/   |_/\___|_| |
-	                        _/ |
-	                       |__/ 
 [![Clojars Project](https://img.shields.io/clojars/v/sss4clj.svg)](https://clojars.org/sss4clj)
 
 [![Build Status](https://travis-ci.org/michaellindon/sss4clj.svg?branch=master)](https://travis-ci.org/michaellindon/sss4clj)
