@@ -1,4 +1,4 @@
-![sss4clj](https://github.com/michaellindon/sss4clj/tree/master/logo/sss4clj.png)
+![sss4clj](https://raw.githubusercontent.com/michaellindon/sss4clj/master/logo/sss4clj.png)
 	               ___      _ _ 
 [![Clojars Project](https://img.shields.io/clojars/v/sss4clj.svg)](https://clojars.org/sss4clj)
 
