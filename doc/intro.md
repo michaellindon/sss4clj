@@ -4,6 +4,9 @@ Shotgun Stochastic Search is an algorithm for maximizing functions {0,1}ᴾ → 
 Each element a ∈ {0,1}ᴾ can be uniquely identified by an "active set" i.e. {i ∈ ℕ| aᵢ = 1}. This project makes
 the design choice to work with the latter.
 
+![alt text](../images/sss4clj.svg "Stochastic Search for Clojure")
+
+
 ## Installation
 Leiningen:
 

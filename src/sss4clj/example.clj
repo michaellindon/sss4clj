@@ -1,10 +1,59 @@
 (ns sss4clj.example
   (:require [sss4clj.core :refer :all]
-            [clojure.math.combinatorics :as combo]))
+            [clojure.math.combinatorics :as combo]
+            [clojure.set :as set]))
 
-;; Let A ⊆ Ω ⊂ ℕ
-(def A #{0 3 4})
-(def Omega #{0 1 2 3 4})
+(. (new org.apache.commons.math3.analysis.integration.RombergIntegrator) integrate 10000 (fn [x] x) 0 1)
+(. (new org.apache.commons.math3.analysis.integration.RombergIntegrator) setup) 
+(def foo (new org.apache.commons.math3.analysis.integration.SimpsonIntegrator))
+(def myfun (fn [x] (* x x)))
+(. foo integrate 10 myfun 0 1)
+()
+(type org.apache.commons.math3.analysis.FunctionUtils)
+(use org.apache.common.math3)
+
+(new org.apache.commons.math3.analysis.UnivariaterealFunction)
+(def optimizer (new org.apache.commons.math3.optimization.linear.SimplexSolver 0.00001 0.000000000001))
+(. optimizer setSimplex (new org.apache.commons.math3.optimization.direct.NelderMeadSimplex [0.2 0.2]) )
+
+(def optim (new org.apache.commons.math3.optimization.direct.PowellOptimizer 0.00000001 0.00000000000001))
+(new MaxEval 1000)
+(. optim optimize (new MaxEval(1000)) (new ObjectiveFunction (fn [x y] (+ (* x x) (y y)))) GoalType.MINIMIZE (new InitialGuess([ 0 0 ])))
+(.newInstance org.apache.commons.math3.analysis.UnivariateFunction)
+
+(def Omega #{0 1 2 3 4 5 6 7 8 9})
+
+(def pset (combo/subsets (into [] Omega)))
+(def vin (into (hash-map) (map vector Omega (map rand Omega))))
+(def vout (into (hash-map) (map vector Omega (map rand Omega))))
+(defn fin [x] (vin x))
+(defn fout [x] (vout x))
+(defn objective [x] (+ (reduce + 0 (map fout (set/difference Omega x))) (reduce + 0 (map fin x))))
+(defn mypred [x y] (> (+ (fin x) (fout y)) (+ (fin y) (fout x))))
+
+(sort mypred (into [] Omega))
+(sort (fn [x y] (> (second x) (second y))) (filter (fn [z] (= 3 (count (first z)))) (map vector pset (map objective pset))))
+
+(import org.apache.commons.math3.analysis.integration.gauss)
+(import org.apache.commons)
+(defn testf []
+  (reify
+    org.apache.commons.math3.analysis.UnivariateFunction
+    (value [x] (* 2 x))))
+
+(def foo (new org.apache.commons.math3.distribution.NormalDistribution 10 0.01))
+(.getSampler foo)
+
+
+(.value (new org.apache.commons.math3.analysis.function.Abs) -3)
+(def foo (reify org.apache.commons.math3.analysis.UnivariateFunction
+  (value [this x]
+    x)))
+(instance? org.apache.commons.math3.analysis.UnivariateFunction foo)
+(.value foo 2)
+(def my-integrator (new org.apache.commons.math3.analysis.integration.IterativeLegendreGaussIntegrator))
+(def my-integrator org.apache.commons.math3.analysis.integration.IterativeLegendreGaussIntegrator)
+(.integrate my-integrator 100 foo Double/NEGATIVE_INFINITY Double/POSITIVE_INFINITY)
 
 ;; use drop-1 to get all sets formed by removing 1 element
 (drop-1 A)
