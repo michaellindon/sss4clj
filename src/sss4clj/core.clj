@@ -57,7 +57,7 @@
 (defn next-model
   "Performs one iteration of the sss algorithm"
   [score Omega A]
-  (let [candidates (map #(rand-multinomial (pmap score %) %) (filter (complement empty?) (neighbours Omega A)))]
+  (let [candidates (filter (not nil?) (map #(rand-multinomial (pmap score %) %) (filter (complement empty?) (neighbours Omega A))))]
     (rand-multinomial (map score candidates) candidates)))
 
 (defn add-priority-map
