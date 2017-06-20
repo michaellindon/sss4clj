@@ -5,8 +5,8 @@
             [clojure.data.priority-map :refer :all]))
 
 
-;Extend clojure.set namespace to includ a complement function
-(intern 'clojure.set 'complement (fn [Omega A] (s/difference Omega A)))
+;Extend clojure.set namespace to includ a set-complement function
+(intern 'clojure.set 'set-complement (fn [Omega A] (s/difference Omega A)))
 
 (defn drop-1
   "Returns all sets formed by removal of 1 element from A."
@@ -17,14 +17,14 @@
   "Returns all sets formed from the union of A with one
    element of Aᶜ."
   [Omega A]
-  (let [Ac (s/complement Omega A)]
+  (let [Ac (s/set-complement Omega A)]
     (for [x Ac] (s/union #{x} A))))
 
 (defn swap-1
   "Returns all sets formed from exchanging one element
    of A with one element of Aᶜ"
   [Omega A]
-  (let [Ac (s/complement Omega A)
+  (let [Ac (s/set-complement Omega A)
         A-drop-1 (drop-1 A)]
     (for [x Ac
           y A-drop-1]
